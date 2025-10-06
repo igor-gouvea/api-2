@@ -1,0 +1,17 @@
+deployment:
+  name: api-2
+  replicas: 1
+  repository: iagouvea/api-2
+  tag: "9e6acc9"
+
+
+service:
+  name: api-2-svc
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: true
+  name: api-2-ingress
+  className: "nginx"
+  host: api-2.dev.local

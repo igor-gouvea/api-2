@@ -1,0 +1,20 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: api-2
+  description: Python app that display some informations about your API.
+  annotations:
+   github.com/project-slug: igor-gouvea/api-2
+   backstage.io/techdocs-ref: dir:.
+  tags:
+    - python
+    - api
+  links:
+    - url: http://api-2.dev.local
+      title: Development API
+      icon: dashboard
+spec:
+  type: service
+  owner: group:default/development
+  lifecycle: production
+  system: projeto-1

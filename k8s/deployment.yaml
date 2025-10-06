@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-2
+  namespace: lab
+  labels:
+    app: api-2
+spec:
+  replicas: 1
+  selector: 
+    matchLabels:
+      app: api-2
+  template:
+    metadata:
+      labels:
+        app: api-2
+    spec:
+      containers:
+      - name: api-2
+        image: iagouvea/api-2:1.0
+        ports:
+        - containerPort: 5000
