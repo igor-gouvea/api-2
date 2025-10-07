@@ -18,3 +18,7 @@ spec:
   owner: group:default/development
   lifecycle: production
   system: projeto-1
+  dependsOn:
+    - resource:default/mysql
+  dependencyOf:
+    - component:default/website-1
